@@ -1,0 +1,80 @@
+{
+	"compilerOptions": {
+		/* 基础配置 */
+		"target": "ESNext", // 生成最新ES标准代码
+		"module": "ESNext", // 使用ES模块标准
+		"moduleResolution": "node", // 使用Node.js风格模块解析
+		"baseUrl": ".", // 解析非相对模块的基地址
+		"outDir": "./dist", // 输出目录（配合类型检查）
+		"esModuleInterop": true, // 兼容CommonJS和ES模块
+		"strict": true, // 开启所有严格类型检查
+
+		/* 类型检查增强 */
+		"skipLibCheck": true, // 跳过库类型检查（提升性能）
+		"forceConsistentCasingInFileNames": true, // 强制文件名大小写一致
+		"noImplicitAny": true, // 禁止隐式any类型（严格模式）
+		"strictNullChecks": true, // 严格的null检查
+		"strictFunctionTypes": true, // 严格的函数类型检查
+		"strictBindCallApply": true, // 严格的bind/call/apply检查
+		"noImplicitThis": true, // 禁止隐式this
+		"alwaysStrict": true, // 在严格模式下解析
+
+		/* 路径映射（与vite.config.ts别名匹配） */
+		"paths": {
+			"@/*": ["src/*"],
+      		"@/types/*": ["src/types/*"],
+		},
+
+		/* Vue支持 */
+		"jsx": "preserve", // 保留JSX（兼容Vue JSX）
+		"isolatedModules": true, // 确保每个文件是独立模块（Vite要求）
+		"types": [
+			"vite/client", // Vite环境变量支持
+		],
+		"resolveJsonModule": true, // 允许导入JSON
+
+		/* 实验性支持（按需开启） */
+		"experimentalDecorators": true, // 启用装饰器（如需）
+		"useDefineForClassFields": true, // 使用标准类字段定义
+
+		/* 源码映射 */
+		"sourceMap": true, // 生成sourcemap
+		"inlineSources": true, // 将源码包含在sourcemap中
+
+		/* 其他优化 */
+		"allowSyntheticDefaultImports": true, // 允许从无默认导出的模块导入
+		"noUnusedLocals": true, // 报告未使用的局部变量
+		"noUnusedParameters": true, // 报告未使用的参数
+		"noImplicitReturns": true, // 函数必须显式返回
+		"noFallthroughCasesInSwitch": true // 防止switch语句贯穿
+	},
+
+	/* 包含范围 */
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.d.ts",
+		"src/**/*.tsx",
+		"src/**/*.vue", // 包含Vue文件类型检查
+		"src/**/**/*.vue", // 包含Vue文件类型检查
+		"types/**/*.d.ts", // 全局类型声明
+		"mock/**/*.ts", // Mock文件类型检查
+		"src/router/index.js", // 路由文件类型检查
+		// "vite.config.ts" // Vite配置文件类型检查
+	],
+
+	/* 排除范围 */
+	"exclude": [
+		"node_modules",
+		"dist",
+		"**/*.spec.ts", // 排除测试文件
+		"public" // 排除静态资源目录
+	],
+
+	/* Vue专用配置 */
+	"vueCompilerOptions": {
+		"target": 3, // Vue 3目标
+		"experimentalDisableTemplateSupport": true, // 禁用模板支持（使用TSX）
+		"strictTemplates": true, // 严格的模板类型检查
+		"plugins": ["@volar/vue-typescript-plugin"]
+	}
+}
