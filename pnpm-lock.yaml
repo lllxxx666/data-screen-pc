@@ -44,13 +44,13 @@ importers:
         version: 4.1.11
       '@vitejs/plugin-vue':
         specifier: ^6.0.0
-        version: 6.0.0(vite@7.0.5(jiti@2.4.2)(less@4.4.0)(lightningcss@1.30.1)(terser@5.43.1))(vue@3.5.17)
+        version: 6.0.0(vite@7.0.5(jiti@2.4.2)(less@4.4.1)(lightningcss@1.30.1)(terser@5.43.1))(vue@3.5.17)
       autoprefixer:
         specifier: ^10.4.21
         version: 10.4.21(postcss@8.5.6)
       less:
-        specifier: ^4.4.0
-        version: 4.4.0
+        specifier: ^4.4.1
+        version: 4.4.1
       postcss:
         specifier: ^8.5.6
         version: 8.5.6
@@ -74,7 +74,7 @@ importers:
         version: 5.43.1
       vite:
         specifier: ^7.0.5
-        version: 7.0.5(jiti@2.4.2)(less@4.4.0)(lightningcss@1.30.1)(terser@5.43.1)
+        version: 7.0.5(jiti@2.4.2)(less@4.4.1)(lightningcss@1.30.1)(terser@5.43.1)
 
 packages:
 
@@ -845,8 +845,8 @@ packages:
   kdbush@4.0.2:
     resolution: {integrity: sha512-WbCVYJ27Sz8zi9Q7Q0xHC+05iwkm3Znipc2XTlrnJbsHMYktW4hPhXUE8Ys1engBrvffoSCqbil1JQAa7clRpA==}
 
-  less@4.4.0:
-    resolution: {integrity: sha512-kdTwsyRuncDfjEs0DlRILWNvxhDG/Zij4YLO4TMJgDLW+8OzpfkdPnRgrsRuY1o+oaxJGWsps5f/RVBgGmmN0w==}
+  less@4.4.1:
+    resolution: {integrity: sha512-X9HKyiXPi0f/ed0XhgUlBeFfxrlDP3xR4M7768Zl+WXLUViuL9AOPPJP4nCV0tgRWvTYvpNmN0SFhZOQzy16PA==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -1225,6 +1225,9 @@ packages:
 
   tslib@2.3.0:
     resolution: {integrity: sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==}
+
+  tslib@2.8.1:
+    resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
   update-browserslist-db@1.1.3:
     resolution: {integrity: sha512-UxhIZQ+QInVdunkDAaiazvvT/+fXL5Osr0JZlJulepYu6Jd7qJtDZjlur0emRlT71EN3ScPoE7gvsuIKKNavKw==}
@@ -1625,10 +1628,10 @@ snapshots:
 
   '@types/web-bluetooth@0.0.21': {}
 
-  '@vitejs/plugin-vue@6.0.0(vite@7.0.5(jiti@2.4.2)(less@4.4.0)(lightningcss@1.30.1)(terser@5.43.1))(vue@3.5.17)':
+  '@vitejs/plugin-vue@6.0.0(vite@7.0.5(jiti@2.4.2)(less@4.4.1)(lightningcss@1.30.1)(terser@5.43.1))(vue@3.5.17)':
     dependencies:
       '@rolldown/pluginutils': 1.0.0-beta.19
-      vite: 7.0.5(jiti@2.4.2)(less@4.4.0)(lightningcss@1.30.1)(terser@5.43.1)
+      vite: 7.0.5(jiti@2.4.2)(less@4.4.1)(lightningcss@1.30.1)(terser@5.43.1)
       vue: 3.5.17
 
   '@vue/compiler-core@3.5.17':
@@ -1970,11 +1973,11 @@ snapshots:
 
   kdbush@4.0.2: {}
 
-  less@4.4.0:
+  less@4.4.1:
     dependencies:
       copy-anything: 2.0.6
       parse-node-version: 1.0.1
-      tslib: 2.3.0
+      tslib: 2.8.1
     optionalDependencies:
       errno: 0.1.8
       graceful-fs: 4.2.11
@@ -2291,13 +2294,15 @@ snapshots:
 
   tslib@2.3.0: {}
 
+  tslib@2.8.1: {}
+
   update-browserslist-db@1.1.3(browserslist@4.25.3):
     dependencies:
       browserslist: 4.25.3
       escalade: 3.2.0
       picocolors: 1.1.1
 
-  vite@7.0.5(jiti@2.4.2)(less@4.4.0)(lightningcss@1.30.1)(terser@5.43.1):
+  vite@7.0.5(jiti@2.4.2)(less@4.4.1)(lightningcss@1.30.1)(terser@5.43.1):
     dependencies:
       esbuild: 0.25.6
       fdir: 6.4.6(picomatch@4.0.3)
@@ -2308,7 +2313,7 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
       jiti: 2.4.2
-      less: 4.4.0
+      less: 4.4.1
       lightningcss: 1.30.1
       terser: 5.43.1
 
